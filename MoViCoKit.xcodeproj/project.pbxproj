@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		220FB7A813F598E600364D21 /* MoViCoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 220FB7A613F598E500364D21 /* MoViCoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		220FB7A913F598E600364D21 /* MoViCoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7A713F598E600364D21 /* MoViCoKit.m */; };
+		220FB7AB13F599C300364D21 /* MVCMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 220FB7AA13F599C300364D21 /* MVCMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		220FB7D713F5A7E500364D21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7D613F5A7E500364D21 /* main.m */; };
+		220FB7DA13F5A7FE00364D21 /* MVCTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7D913F5A7FE00364D21 /* MVCTestDelegate.m */; };
+		220FB80413F5A9C800364D21 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB80313F5A9C800364D21 /* RootViewController.m */; };
+		220FB87313F5BD1E00364D21 /* LinkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB87213F5BD1E00364D21 /* LinkImage.m */; };
+		220FB89413F5BFF800364D21 /* libMoViCoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMoViCoKit.a */; };
+		220FB99313F5C6B300364D21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220FB8DE13F5C66200364D21 /* UIKit.framework */; };
+		220FB99413F5C6B300364D21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		220FB99513F5C6B400364D21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220FB98D13F5C69600364D21 /* CoreGraphics.framework */; };
+		220FBA3213F667D800364D21 /* ImageSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA3113F667D800364D21 /* ImageSearchController.m */; };
+		220FBA3813F668B000364D21 /* ImageSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA3713F668B000364D21 /* ImageSearchRequest.m */; };
+		220FBA5413F6695F00364D21 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA4B13F6695F00364D21 /* NSObject+SBJSON.m */; };
+		220FBA5513F6695F00364D21 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA4D13F6695F00364D21 /* NSString+SBJSON.m */; };
+		220FBA5613F6695F00364D21 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA4F13F6695F00364D21 /* SBJsonBase.m */; };
+		220FBA5713F6695F00364D21 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA5113F6695F00364D21 /* SBJsonParser.m */; };
+		220FBA5813F6695F00364D21 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA5313F6695F00364D21 /* SBJsonWriter.m */; };
+		220FBA5D13F66B6A00364D21 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FBA5C13F66B6A00364D21 /* FlickrPhoto.m */; };
+		2245C65813FFB90700EBF7F6 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2245C65713FFB90700EBF7F6 /* default.png */; };
+		2245C67A13FFBA5000EBF7F6 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C67513FFBA5000EBF7F6 /* UIImage+Alpha.m */; };
+		2245C67B13FFBA5000EBF7F6 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C67713FFBA5000EBF7F6 /* UIImage+Resize.m */; };
+		2245C67C13FFBA5000EBF7F6 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C67913FFBA5000EBF7F6 /* UIImage+RoundedCorner.m */; };
+		2245C6BB13FFC9D800EBF7F6 /* LinkImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */; };
+		AA747D9F0F9514B9006C5449 /* MoViCoKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		220FB89213F5BFD100364D21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = MoViCoKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		220FB7A613F598E500364D21 /* MoViCoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCoKit.h; sourceTree = "<group>"; };
+		220FB7A713F598E600364D21 /* MoViCoKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoViCoKit.m; sourceTree = "<group>"; };
+		220FB7AA13F599C300364D21 /* MVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCMacros.h; sourceTree = "<group>"; };
+		220FB7C213F5A75700364D21 /* MVCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		220FB7C413F5A75700364D21 /* MVCTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVCTest-Info.plist"; sourceTree = "<group>"; };
+		220FB7D613F5A7E500364D21 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		220FB7D813F5A7FE00364D21 /* MVCTestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCTestDelegate.h; sourceTree = "<group>"; };
+		220FB7D913F5A7FE00364D21 /* MVCTestDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVCTestDelegate.m; sourceTree = "<group>"; };
+		220FB7DB13F5A85A00364D21 /* MVCTest_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCTest_Prefix.pch; sourceTree = "<group>"; };
+		220FB80213F5A9C800364D21 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		220FB80313F5A9C800364D21 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		220FB87113F5BD1E00364D21 /* LinkImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkImage.h; sourceTree = "<group>"; };
+		220FB87213F5BD1E00364D21 /* LinkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkImage.m; sourceTree = "<group>"; };
+		220FB8DE13F5C66200364D21 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		220FB98D13F5C69600364D21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		220FBA3013F667D800364D21 /* ImageSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearchController.h; sourceTree = "<group>"; };
+		220FBA3113F667D800364D21 /* ImageSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSearchController.m; sourceTree = "<group>"; };
+		220FBA3613F668B000364D21 /* ImageSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSearchRequest.h; sourceTree = "<group>"; };
+		220FBA3713F668B000364D21 /* ImageSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSearchRequest.m; sourceTree = "<group>"; };
+		220FBA4913F6695F00364D21 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		220FBA4A13F6695F00364D21 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		220FBA4B13F6695F00364D21 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		220FBA4C13F6695F00364D21 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		220FBA4D13F6695F00364D21 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		220FBA4E13F6695F00364D21 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		220FBA4F13F6695F00364D21 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		220FBA5013F6695F00364D21 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		220FBA5113F6695F00364D21 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		220FBA5213F6695F00364D21 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		220FBA5313F6695F00364D21 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		220FBA5B13F66B6A00364D21 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
+		220FBA5C13F66B6A00364D21 /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
+		2245C65713FFB90700EBF7F6 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		2245C67413FFBA5000EBF7F6 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		2245C67513FFBA5000EBF7F6 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		2245C67613FFBA5000EBF7F6 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		2245C67713FFBA5000EBF7F6 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		2245C67813FFBA5000EBF7F6 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		2245C67913FFBA5000EBF7F6 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		2245C6B913FFC9D800EBF7F6 /* LinkImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkImageCell.h; sourceTree = "<group>"; };
+		2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkImageCell.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCoKit_Prefix.pch; sourceTree = "<group>"; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libMoViCoKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMoViCoKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220FB7C013F5A75700364D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220FB89413F5BFF800364D21 /* libMoViCoKit.a in Frameworks */,
+				220FB99313F5C6B300364D21 /* UIKit.framework in Frameworks */,
+				220FB99413F5C6B300364D21 /* Foundation.framework in Frameworks */,
+				220FB99513F5C6B400364D21 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libMoViCoKit.a */,
+				220FB7C213F5A75700364D21 /* MVCTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* MoViCo */ = {
+			isa = PBXGroup;
+			children = (
+				220FB7D513F5A79E00364D21 /* Sample */,
+				08FB77AEFE84172EC02AAC07 /* lib */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = MoViCo;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				220FB7A613F598E500364D21 /* MoViCoKit.h */,
+				220FB7A713F598E600364D21 /* MoViCoKit.m */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				32C88DFF0371C24200C91783 /* Other sources */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		220FB7D513F5A79E00364D21 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				2245C8861400490E00EBF7F6 /* Additions */,
+				2245C885140048F500EBF7F6 /* Classes */,
+				2245C818140047AA00EBF7F6 /* Frameworks */,
+				2245C884140048D800EBF7F6 /* Other sources */,
+				2245C65613FFB8E100EBF7F6 /* Resources */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		220FB80013F5A9AB00364D21 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				220FB80213F5A9C800364D21 /* RootViewController.h */,
+				220FB80313F5A9C800364D21 /* RootViewController.m */,
+				220FBA3013F667D800364D21 /* ImageSearchController.h */,
+				220FBA3113F667D800364D21 /* ImageSearchController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		220FB80113F5A9B400364D21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				220FB87113F5BD1E00364D21 /* LinkImage.h */,
+				220FB87213F5BD1E00364D21 /* LinkImage.m */,
+				220FBA3613F668B000364D21 /* ImageSearchRequest.h */,
+				220FBA3713F668B000364D21 /* ImageSearchRequest.m */,
+				220FBA5B13F66B6A00364D21 /* FlickrPhoto.h */,
+				220FBA5C13F66B6A00364D21 /* FlickrPhoto.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		220FBA4813F6695F00364D21 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				220FBA4913F6695F00364D21 /* JSON.h */,
+				220FBA4A13F6695F00364D21 /* NSObject+SBJSON.h */,
+				220FBA4B13F6695F00364D21 /* NSObject+SBJSON.m */,
+				220FBA4C13F6695F00364D21 /* NSString+SBJSON.h */,
+				220FBA4D13F6695F00364D21 /* NSString+SBJSON.m */,
+				220FBA4E13F6695F00364D21 /* SBJsonBase.h */,
+				220FBA4F13F6695F00364D21 /* SBJsonBase.m */,
+				220FBA5013F6695F00364D21 /* SBJsonParser.h */,
+				220FBA5113F6695F00364D21 /* SBJsonParser.m */,
+				220FBA5213F6695F00364D21 /* SBJsonWriter.h */,
+				220FBA5313F6695F00364D21 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		2245C65613FFB8E100EBF7F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2245C65713FFB90700EBF7F6 /* default.png */,
+				220FB7C413F5A75700364D21 /* MVCTest-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2245C67313FFBA5000EBF7F6 /* UIImage-categories */ = {
+			isa = PBXGroup;
+			children = (
+				2245C67413FFBA5000EBF7F6 /* UIImage+Alpha.h */,
+				2245C67513FFBA5000EBF7F6 /* UIImage+Alpha.m */,
+				2245C67613FFBA5000EBF7F6 /* UIImage+Resize.h */,
+				2245C67713FFBA5000EBF7F6 /* UIImage+Resize.m */,
+				2245C67813FFBA5000EBF7F6 /* UIImage+RoundedCorner.h */,
+				2245C67913FFBA5000EBF7F6 /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage-categories";
+			sourceTree = "<group>";
+		};
+		2245C818140047AA00EBF7F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				220FB8DE13F5C66200364D21 /* UIKit.framework */,
+				220FB98D13F5C69600364D21 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2245C883140048CA00EBF7F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2245C6B913FFC9D800EBF7F6 /* LinkImageCell.h */,
+				2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2245C884140048D800EBF7F6 /* Other sources */ = {
+			isa = PBXGroup;
+			children = (
+				220FB7D613F5A7E500364D21 /* main.m */,
+				220FB7DB13F5A85A00364D21 /* MVCTest_Prefix.pch */,
+			);
+			name = "Other sources";
+			sourceTree = "<group>";
+		};
+		2245C885140048F500EBF7F6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				220FB80113F5A9B400364D21 /* Models */,
+				220FB80013F5A9AB00364D21 /* Controllers */,
+				2245C883140048CA00EBF7F6 /* Views */,
+				220FB7D813F5A7FE00364D21 /* MVCTestDelegate.h */,
+				220FB7D913F5A7FE00364D21 /* MVCTestDelegate.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2245C8861400490E00EBF7F6 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				2245C67313FFBA5000EBF7F6 /* UIImage-categories */,
+				220FBA4813F6695F00364D21 /* JSON */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */,
+				220FB7AA13F599C300364D21 /* MVCMacros.h */,
+			);
+			name = "Other sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* MoViCoKit_Prefix.pch in Headers */,
+				220FB7A813F598E600364D21 /* MoViCoKit.h in Headers */,
+				220FB7AB13F599C300364D21 /* MVCMacros.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		220FB7C113F5A75700364D21 /* MVCTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 220FB7C713F5A75800364D21 /* Build configuration list for PBXNativeTarget "MVCTest" */;
+			buildPhases = (
+				220FB7BE13F5A75700364D21 /* Resources */,
+				220FB7BF13F5A75700364D21 /* Sources */,
+				220FB7C013F5A75700364D21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				220FB89313F5BFD100364D21 /* PBXTargetDependency */,
+			);
+			name = MVCTest;
+			productName = MVCTest;
+			productReference = 220FB7C213F5A75700364D21 /* MVCTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2AAC07D0554694100DB518D /* MoViCoKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MoViCoKit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoViCoKit;
+			productName = MoViCo;
+			productReference = D2AAC07E0554694100DB518D /* libMoViCoKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = " ";
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "MoViCoKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* MoViCo */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* MoViCoKit */,
+				220FB7C113F5A75700364D21 /* MVCTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		220FB7BE13F5A75700364D21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2245C65813FFB90700EBF7F6 /* default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220FB7BF13F5A75700364D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220FB7D713F5A7E500364D21 /* main.m in Sources */,
+				220FB7DA13F5A7FE00364D21 /* MVCTestDelegate.m in Sources */,
+				220FB80413F5A9C800364D21 /* RootViewController.m in Sources */,
+				220FB87313F5BD1E00364D21 /* LinkImage.m in Sources */,
+				220FBA3213F667D800364D21 /* ImageSearchController.m in Sources */,
+				220FBA3813F668B000364D21 /* ImageSearchRequest.m in Sources */,
+				220FBA5413F6695F00364D21 /* NSObject+SBJSON.m in Sources */,
+				220FBA5513F6695F00364D21 /* NSString+SBJSON.m in Sources */,
+				220FBA5613F6695F00364D21 /* SBJsonBase.m in Sources */,
+				220FBA5713F6695F00364D21 /* SBJsonParser.m in Sources */,
+				220FBA5813F6695F00364D21 /* SBJsonWriter.m in Sources */,
+				220FBA5D13F66B6A00364D21 /* FlickrPhoto.m in Sources */,
+				2245C67A13FFBA5000EBF7F6 /* UIImage+Alpha.m in Sources */,
+				2245C67B13FFBA5000EBF7F6 /* UIImage+Resize.m in Sources */,
+				2245C67C13FFBA5000EBF7F6 /* UIImage+RoundedCorner.m in Sources */,
+				2245C6BB13FFC9D800EBF7F6 /* LinkImageCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220FB7A913F598E600364D21 /* MoViCoKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		220FB89313F5BFD100364D21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* MoViCoKit */;
+			targetProxy = 220FB89213F5BFD100364D21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/MoViCo.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = lib/MoViCoKit_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = MVC_DEBUG;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = MoViCoKit;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "i386 armv6 armv7";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/MoViCo.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = lib/MoViCoKit_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = MoViCoKit;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "i386 armv6 armv7";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+			};
+			name = Release;
+		};
+		220FB7C513F5A75800364D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sample/MVCTest_Prefix.pch;
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../MoViCo/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include";
+				INFOPLIST_FILE = "Sample/MVCTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MVCTest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "i386 armv6 armv7";
+			};
+			name = Debug;
+		};
+		220FB7C613F5A75800364D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sample/MVCTest_Prefix.pch;
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../MoViCo/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include";
+				INFOPLIST_FILE = "Sample/MVCTest-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = MVCTest;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "i386 armv6 armv7";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "MoViCoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "MoViCoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		220FB7C713F5A75800364D21 /* Build configuration list for PBXNativeTarget "MVCTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220FB7C513F5A75800364D21 /* Debug */,
+				220FB7C613F5A75800364D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
