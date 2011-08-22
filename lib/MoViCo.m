@@ -1,12 +1,12 @@
 //
-//  MoViCoKit.m
+//  MoViCo.m
 //  MoViCoKit
 //
-//  Created by Igor Fedorov on 10/15/10.
-//  Copyright 2010. All rights reserved.
+//  Created by Igor Fedorov on 8/21/11.
+//  Copyright 2011  . All rights reserved.
 //
 
-#import "MoViCoKit.h"
+#import "MoViCo.h"
 ///////////////////////////////////////////////////////////////////////////////////////
 @interface MoViCo()
 
@@ -112,7 +112,7 @@ static BOOL isMultiThread;
 	} else {
 		runQueue = [NSOperationQueue mainQueue];
 	}
-
+	
 	[runQueue addOperationWithBlock:[self lookingForControllersWithModel:aModel onFindBlock:^ (NSArray *needs) {
 		[needs makeObjectsPerformSelector:@selector(modelWillUpdate:) withObject:aModel];
 	}]];

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		220FB7A813F598E600364D21 /* MoViCoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 220FB7A613F598E500364D21 /* MoViCoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		220FB7A913F598E600364D21 /* MoViCoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7A713F598E600364D21 /* MoViCoKit.m */; };
 		220FB7AB13F599C300364D21 /* MVCMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 220FB7AA13F599C300364D21 /* MVCMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		220FB7D713F5A7E500364D21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7D613F5A7E500364D21 /* main.m */; };
 		220FB7DA13F5A7FE00364D21 /* MVCTestDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220FB7D913F5A7FE00364D21 /* MVCTestDelegate.m */; };
@@ -31,6 +30,8 @@
 		2245C67B13FFBA5000EBF7F6 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C67713FFBA5000EBF7F6 /* UIImage+Resize.m */; };
 		2245C67C13FFBA5000EBF7F6 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C67913FFBA5000EBF7F6 /* UIImage+RoundedCorner.m */; };
 		2245C6BB13FFC9D800EBF7F6 /* LinkImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */; };
+		2245C9F01400F63700EBF7F6 /* MoViCo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C9DB1400F56600EBF7F6 /* MoViCo.m */; };
+		2245C9F11400F65500EBF7F6 /* MoViCo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2245C9DA1400F56600EBF7F6 /* MoViCo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA747D9F0F9514B9006C5449 /* MoViCoKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		220FB7A613F598E500364D21 /* MoViCoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCoKit.h; sourceTree = "<group>"; };
-		220FB7A713F598E600364D21 /* MoViCoKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoViCoKit.m; sourceTree = "<group>"; };
 		220FB7AA13F599C300364D21 /* MVCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVCMacros.h; sourceTree = "<group>"; };
 		220FB7C213F5A75700364D21 /* MVCTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVCTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		220FB7C413F5A75700364D21 /* MVCTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVCTest-Info.plist"; sourceTree = "<group>"; };
@@ -87,6 +87,8 @@
 		2245C67913FFBA5000EBF7F6 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		2245C6B913FFC9D800EBF7F6 /* LinkImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkImageCell.h; sourceTree = "<group>"; };
 		2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkImageCell.m; sourceTree = "<group>"; };
+		2245C9DA1400F56600EBF7F6 /* MoViCo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCo.h; sourceTree = "<group>"; };
+		2245C9DB1400F56600EBF7F6 /* MoViCo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoViCo.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCoKit_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMoViCoKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMoViCoKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +148,9 @@
 		08FB77AEFE84172EC02AAC07 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				2245C9DA1400F56600EBF7F6 /* MoViCo.h */,
+				2245C9DB1400F56600EBF7F6 /* MoViCo.m */,
 				220FB7A613F598E500364D21 /* MoViCoKit.h */,
-				220FB7A713F598E600364D21 /* MoViCoKit.m */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				32C88DFF0371C24200C91783 /* Other sources */,
 			);
@@ -297,6 +300,7 @@
 				AA747D9F0F9514B9006C5449 /* MoViCoKit_Prefix.pch in Headers */,
 				220FB7A813F598E600364D21 /* MoViCoKit.h in Headers */,
 				220FB7AB13F599C300364D21 /* MVCMacros.h in Headers */,
+				2245C9F11400F65500EBF7F6 /* MoViCo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				220FB7A913F598E600364D21 /* MoViCoKit.m in Sources */,
+				2245C9F01400F63700EBF7F6 /* MoViCo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
