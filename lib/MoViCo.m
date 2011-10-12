@@ -3,7 +3,7 @@
 //  MoViCoKit
 //
 //  Created by Igor Fedorov on 8/21/11.
-//  Copyright 2011  . All rights reserved.
+//  Copyright 2011. All rights reserved.
 //
 
 #import "MoViCo.h"
