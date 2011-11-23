@@ -11,7 +11,7 @@
 #import "JSON.h"
 #import "FlickrPhoto.h"
 
-#define SEARCH_URL_FORMAT @"http://query.yahooapis.com/v1/public/yql?q=select * from flickr.photos.search(0,%i) where text=\"%@%\"&format=json&callback="
+#define SEARCH_URL_FORMAT @"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=9d3ea1e79bf9a7a4172511221b3d0c4f&per_page=%i&page=0&text=%@&format=json&nojsoncallback=1"
 
 @interface ImageSearchRequest()
 
@@ -68,11 +68,11 @@
 		}
 		
 		if (error == nil && resopnse != nil) {
-			NSInteger count = [[[resopnse objectForKey:@"query"] objectForKey:@"count"] intValue];
+			NSInteger count = [[[resopnse objectForKey:@"photos"] objectForKey:@"photo"] count];
 			NSArray *flickrImages = nil;
 			if (count > 0) {
 				NSLog(@"get %i images",count);
-				NSDictionary *requestResults = [[resopnse objectForKey:@"query"] objectForKey:@"results"];
+				NSDictionary *requestResults = [resopnse objectForKey:@"photos"];
 				if (requestResults != nil) {
 					id photos = [requestResults objectForKey:@"photo"];
 					flickrImages = [photos isKindOfClass:[NSArray class]] ? photos : [NSArray array];

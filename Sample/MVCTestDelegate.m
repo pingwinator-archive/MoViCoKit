@@ -10,8 +10,6 @@
 #import "RootViewController.h"
 
 @interface MVCTestDelegate()
-
-@property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) RootViewController *rootVC;
 
 @end
