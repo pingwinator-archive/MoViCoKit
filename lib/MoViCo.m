@@ -7,6 +7,15 @@
 //
 
 #import "MoViCo.h"
+
+@interface ARCWrapper : NSObject {}
+@property (unsafe_unretained, nonatomic) id<ModelControllerDelegate> controller;
+@end
+
+@implementation ARCWrapper
+@synthesize controller;
+@end
+
 ///////////////////////////////////////////////////////////////////////////////////////
 @interface MoViCo()
 
@@ -58,8 +67,17 @@ static BOOL isMultiThread;
 + (void)addController:(id<ModelControllerDelegate>)aController {
 	@synchronized([MoViCo sharedMVC].controllers) {
 		NSMutableArray *cached = [MoViCo sharedMVC].controllers;
-		if ([cached indexOfObject:aController] == NSNotFound) {
-			[cached addObject:aController];
+		if ([cached indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj controller] == aController) {
+                *stop = YES;
+                return YES;
+            } else {
+                return NO;
+            }
+        }] == NSNotFound) {
+            ARCWrapper *wrapper = [[ARCWrapper alloc] init];
+            wrapper.controller = aController;
+			[cached addObject:wrapper];
 		}
 	}
 }
@@ -67,8 +85,16 @@ static BOOL isMultiThread;
 + (void)removeController:(id <ModelControllerDelegate>)aController {
 	@synchronized([MoViCo sharedMVC].controllers) {
 		NSMutableArray *cached = [MoViCo sharedMVC].controllers;
-		if ([cached indexOfObject:aController] != NSNotFound) {
-			[cached removeObject:aController];
+        NSInteger idx = [cached indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj controller] == aController) {
+                *stop = YES;
+                return YES;
+            } else {
+                return NO;
+            }
+        }];
+		if (idx != NSNotFound) {
+			[cached removeObjectAtIndex:idx];
 			if ([cached count] == 0) {
 				[MoViCo end];
 				return;
@@ -82,7 +108,7 @@ static BOOL isMultiThread;
 		NSMutableArray *cached = [[MoViCo sharedMVC].controllers copy];
 		NSMutableArray *needs = [NSMutableArray array];
 		[cached enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-			id <ModelControllerDelegate> controller = (id<ModelControllerDelegate>)obj;
+			id <ModelControllerDelegate> controller = (id<ModelControllerDelegate>)[obj controller];
 			[[controller interestedModels] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
 				if ([obj isEqual:aModel]) {
 					*stop = YES;

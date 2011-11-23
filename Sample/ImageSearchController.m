@@ -128,6 +128,7 @@
 
 - (void)dealloc {
 	[self.upQueue cancelAllOperations];
+    self.searchRequest = nil;
 }
 
 #pragma mark -
