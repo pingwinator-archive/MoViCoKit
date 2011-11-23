@@ -32,6 +32,7 @@
 		2245C6BB13FFC9D800EBF7F6 /* LinkImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */; };
 		2245C9F01400F63700EBF7F6 /* MoViCo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245C9DB1400F56600EBF7F6 /* MoViCo.m */; };
 		2245C9F11400F65500EBF7F6 /* MoViCo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2245C9DA1400F56600EBF7F6 /* MoViCo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22F4E5C1147D2E5A002715C7 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22F4E5C0147D2E5A002715C7 /* Entitlements.plist */; };
 		AA747D9F0F9514B9006C5449 /* MoViCoKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		2245C6BA13FFC9D800EBF7F6 /* LinkImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkImageCell.m; sourceTree = "<group>"; };
 		2245C9DA1400F56600EBF7F6 /* MoViCo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCo.h; sourceTree = "<group>"; };
 		2245C9DB1400F56600EBF7F6 /* MoViCo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoViCo.m; sourceTree = "<group>"; };
+		22F4E5C0147D2E5A002715C7 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* MoViCoKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoViCoKit_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMoViCoKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMoViCoKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 		0867D691FE84028FC02AAC07 /* MoViCo */ = {
 			isa = PBXGroup;
 			children = (
+				22F4E5C0147D2E5A002715C7 /* Entitlements.plist */,
 				220FB7D513F5A79E00364D21 /* Sample */,
 				08FB77AEFE84172EC02AAC07 /* lib */,
 				034768DFFF38A50411DB9C8B /* Products */,
@@ -378,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2245C65813FFB90700EBF7F6 /* default.png in Resources */,
+				22F4E5C1147D2E5A002715C7 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,7 +434,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/MoViCo.dst;
@@ -454,7 +457,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/MoViCo.dst;
 				GCC_MODEL_TUNING = G5;
@@ -473,7 +475,10 @@
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -488,7 +493,10 @@
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -523,6 +531,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = MVCTest;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "i386 armv6 armv7";
@@ -534,7 +543,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -552,6 +562,7 @@
 					UIKit,
 				);
 				PRODUCT_NAME = MVCTest;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "i386 armv6 armv7";

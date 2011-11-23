@@ -43,10 +43,12 @@
 }
 
 - (void)modelDidUpdate:(id)aModel {
-	// !!!: When multithreading is enabled we might get Assertion failure in -[LinkImageCell modelDidUpdate:].
-	// That becouse threads are not synchronous for interested models. 
-	// For handle this problem we can just check the model and if we need it we can continue.
-	// Super call just needs for check if model is in interesting models of current controller. If not then will throw Assertion failure.
+	/*
+     * !!!: When multithreading is enabled we might get Assertion failure in -[LinkImageCell modelDidUpdate:].
+	 * That becouse threads are not synchronous for interested models. 
+	 * For handle this problem we can just check the model and if we need it we can continue.
+	 * Super call just needs for check if model is in interesting models of current controller. If not then will throw Assertion failure.
+     */
 	[super modelDidUpdate:aModel];
 	if (aModel == self.linkImage) {
 		[self linkImageDidUpdate];
