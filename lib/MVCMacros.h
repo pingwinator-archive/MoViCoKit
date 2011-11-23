@@ -20,8 +20,7 @@
 - (void)dealloc {\
 	NSString *msg = [NSString stringWithFormat:@"Models must be nil %@",[self interestedModels]];\
 	NSAssert([[self interestedModels] count] == 0, msg);\
-	MVC_REMOVE_CONTROLLER\
-	[super dealloc];}
+	MVC_REMOVE_CONTROLLER}
 
 #define MVC_INIT_WITH_CODER \
 - (id)initWithCoder:(NSCoder *)aDecoder {\

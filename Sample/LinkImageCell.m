@@ -25,15 +25,12 @@
 	if (self.linkImage == anImage) {
 		return;
 	}
-	[linkImage release];
-	linkImage = [anImage retain];
+	linkImage = anImage;
 	[self linkImageDidUpdate];
 }
 
 - (void)dealloc {
-	[linkImage release];
 	linkImage = nil;
-    [super dealloc];
 }
 
 #pragma mark -

@@ -10,10 +10,10 @@
 
 @interface FlickrPhoto()
 
-@property (nonatomic, retain) NSString *farm;
-@property (nonatomic, retain) NSString *imageId;
-@property (nonatomic, retain) NSString *secret;
-@property (nonatomic, retain) NSString *server;
+@property (nonatomic, strong) NSString *farm;
+@property (nonatomic, strong) NSString *imageId;
+@property (nonatomic, strong) NSString *secret;
+@property (nonatomic, strong) NSString *server;
 
 @end
 
@@ -22,14 +22,6 @@
 
 @synthesize farm, imageId, secret, server, title;
 
-- (void)dealloc {
-	self.farm = nil;
-	self.imageId = nil;
-	self.secret = nil;
-	self.server = nil;
-	self.title = nil;
-	[super dealloc];
-}
 
 + (FlickrPhoto*)photoWithDictioary:(NSDictionary*)photoDictionary {
 	FlickrPhoto *ret = [[FlickrPhoto alloc] init];
@@ -38,7 +30,7 @@
 	ret.secret = [photoDictionary objectForKey:@"secret"];
 	ret.server = [photoDictionary objectForKey:@"server"];
 	ret.title = [photoDictionary objectForKey:@"title"];
-	return [ret autorelease];
+	return ret;
 }
 
 - (NSURL*)urlForSize:(NSString*)size {

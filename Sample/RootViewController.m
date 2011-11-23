@@ -13,9 +13,6 @@
 
 @implementation RootViewController
 
-- (void)dealloc {
-	[super dealloc];
-}
 
 - (id)init {
 	self = [super init];
@@ -49,12 +46,8 @@
 	ImageSearchController *isc = [[ImageSearchController alloc] init];
 	isc.navigationItem.leftBarButtonItem = close;
 	isc.navigationItem.titleView = segments;
-	[segments release];
-	[close release];
 	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:isc];
-	[isc release];
 	[self presentModalViewController:nav animated:YES];
-	[nav release];
 }
 
 - (void)loadView {
@@ -66,13 +59,11 @@
     [super viewDidLoad];
 	UIBarButtonItem *search = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearchController)];
 	NSArray *items = [NSArray arrayWithObjects:search,nil];
-	[search release];
 	UIToolbar *toolBar = [[UIToolbar alloc] init];
 	[toolBar setItems:items];
 	[toolBar sizeToFit];
 	toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	[self.view addSubview:toolBar];
-	[toolBar release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -14,10 +14,10 @@
 
 @interface ImageSearchController()
 
-@property (nonatomic, retain) UITableView *resultsTable;
-@property (nonatomic, retain) ImageSearchRequest *searchRequest;
-@property (nonatomic, retain) NSMutableDictionary *imageCache;
-@property (nonatomic, retain) NSOperationQueue *upQueue;
+@property (nonatomic, strong) UITableView *resultsTable;
+@property (nonatomic, strong) ImageSearchRequest *searchRequest;
+@property (nonatomic, strong) NSMutableDictionary *imageCache;
+@property (nonatomic, strong) NSOperationQueue *upQueue;
 
 @end
 
@@ -34,8 +34,8 @@
 
 - (id)init {
 	self = [super init];
-	self.upQueue = [[[NSOperationQueue alloc] init] autorelease];
-	self.searchRequest = [[[ImageSearchRequest alloc] init] autorelease];
+	self.upQueue = [[NSOperationQueue alloc] init];
+	self.searchRequest = [[ImageSearchRequest alloc] init];
 	return self;
 }
 
@@ -49,7 +49,6 @@
 	[searchBar sizeToFit];
 	searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	[self.view addSubview:searchBar];
-	[searchBar release];
 	CGRect tableFrame = CGRectInset(self.view.bounds, 0, searchBar.bounds.size.height / 2);
 	tableFrame = CGRectOffset(tableFrame, 0, searchBar.bounds.size.height / 2);
 	UITableView *tableView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
@@ -58,7 +57,6 @@
 	tableView.delegate = (id<UITableViewDelegate>)self;
 	[self.view addSubview:tableView];
 	self.resultsTable = tableView;
-	[tableView release];
 }
 
 #pragma mark -
@@ -100,7 +98,7 @@
     
     LinkImageCell *cell = (LinkImageCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[LinkImageCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[LinkImageCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     FlickrPhoto *photo = [self.searchRequest.results objectAtIndex:indexPath.row];
     cell.textLabel.text = photo.title;
@@ -130,11 +128,6 @@
 
 - (void)dealloc {
 	[self.upQueue cancelAllOperations];
-	self.upQueue = nil;
-	self.imageCache = nil;
-	self.searchRequest = nil;
-	self.resultsTable = nil;
-    [super dealloc];
 }
 
 #pragma mark -

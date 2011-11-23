@@ -12,7 +12,7 @@
 
 @interface LinkImage()
 
-@property (nonatomic, retain) NSURL *link;
+@property (nonatomic, strong) NSURL *link;
 
 @end
 
@@ -21,11 +21,6 @@
 @synthesize link;
 @synthesize image;
 
-- (void)dealloc {
-	self.link = nil;
-	self.image = nil;
-	[super dealloc];
-}
 
 - (void)updateImage {
 	[MoViCo beginUpdatesForModel:self];
@@ -39,7 +34,7 @@
 + (LinkImage*)imageWithLink:(NSURL *)link {
 	LinkImage *ret = [[LinkImage alloc] init];
 	ret.link = link;
-	return [ret autorelease];
+	return ret;
 }
 
 @end

@@ -15,7 +15,7 @@
 
 @interface ImageSearchRequest()
 
-@property (nonatomic, retain) NSOperationQueue *opQueue;
+@property (nonatomic, strong) NSOperationQueue *opQueue;
 
 @end
 
@@ -28,18 +28,12 @@
 
 - (void)dealloc {
 	[self.opQueue cancelAllOperations];
-	self.opQueue = nil;
-	self.onSearchDone = nil;
-	self.onSearchFail = nil;
-	self.results = nil;
-	self.searchText = nil;
-	[super dealloc];
 }
 
 - (id)init {
 	self = [super init];
 	self.results = [NSArray array];
-	self.opQueue = [[[NSOperationQueue alloc] init] autorelease];
+	self.opQueue = [[NSOperationQueue alloc] init];
 	[self.opQueue setMaxConcurrentOperationCount:1];
 	return self;
 }
@@ -52,8 +46,10 @@
 		[MoViCo updateControllersForModel:self];
 		return;
 	}
+    NSString *searchString = self.searchText;
+    __unsafe_unretained ImageSearchRequest * selfWeak = self;
 	[self.opQueue addOperationWithBlock:^ {
-		NSString *fullUrl = [NSString stringWithFormat:SEARCH_URL_FORMAT,limit,self.searchText];
+		NSString *fullUrl = [NSString stringWithFormat:SEARCH_URL_FORMAT,limit,searchString];
 		NSURL *url = [NSURL URLWithString:[fullUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 		NSError *error = nil;
 		NSLog(@"%@",url);
@@ -64,7 +60,6 @@
 		if (error == nil && [responseJSON length] > 0) {
 			SBJsonParser *parser = [[SBJsonParser alloc] init];
 			resopnse = [parser objectWithString:responseJSON error:&error];
-			[parser release];
 		}
 		
 		if (error == nil && resopnse != nil) {
@@ -90,15 +85,15 @@
 			for (NSDictionary *photo in flickrImages) {
 				[photos addObject:[FlickrPhoto photoWithDictioary:photo]];
 			}
-			self.results = [NSArray arrayWithArray:photos];
-			if (self.onSearchDone) {
-				self.onSearchDone(self);
+			selfWeak.results = [NSArray arrayWithArray:photos];
+			if (selfWeak.onSearchDone) {
+				selfWeak.onSearchDone(selfWeak);
 			}
-			[MoViCo updateControllersForModel:self];
+			[MoViCo updateControllersForModel:selfWeak];
 		} else {
 			NSLog(@"%@",error);
-			if (self.onSearchFail) {
-				self.onSearchFail(error);
+			if (selfWeak.onSearchFail) {
+				selfWeak.onSearchFail(error);
 			}
 		}
 	}];

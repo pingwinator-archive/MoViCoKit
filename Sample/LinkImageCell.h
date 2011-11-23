@@ -14,6 +14,6 @@
 
 }
 
-@property (nonatomic, retain) LinkImage *linkImage;
+@property (nonatomic, strong) LinkImage *linkImage;
 
 @end

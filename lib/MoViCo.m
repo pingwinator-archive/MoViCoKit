@@ -10,8 +10,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 @interface MoViCo()
 
-@property (nonatomic, retain) NSMutableArray *controllers;
-@property (nonatomic, retain) NSOperationQueue *updateQueue;
+@property (nonatomic, strong) NSMutableArray *controllers;
+@property (nonatomic, strong) NSOperationQueue *updateQueue;
 
 + (MoViCo *)sharedMVC;
 
@@ -48,7 +48,6 @@ static BOOL isMultiThread;
 }
 
 + (void)end {
-	[sharedMVC release];
 	sharedMVC = nil;
 }
 
@@ -61,7 +60,6 @@ static BOOL isMultiThread;
 		NSMutableArray *cached = [MoViCo sharedMVC].controllers;
 		if ([cached indexOfObject:aController] == NSNotFound) {
 			[cached addObject:aController];
-			[aController release];
 		}
 	}
 }
@@ -70,7 +68,6 @@ static BOOL isMultiThread;
 	@synchronized([MoViCo sharedMVC].controllers) {
 		NSMutableArray *cached = [MoViCo sharedMVC].controllers;
 		if ([cached indexOfObject:aController] != NSNotFound) {
-			[aController retain];
 			[cached removeObject:aController];
 			if ([cached count] == 0) {
 				[MoViCo end];
@@ -81,7 +78,7 @@ static BOOL isMultiThread;
 }
 
 + (void (^)(void))lookingForControllersWithModel:(id)aModel onFindBlock:(void (^)(NSArray *needs))onFindBlock {
-	return [[ ^ {
+	return [ ^ {
 		NSMutableArray *cached = [[MoViCo sharedMVC].controllers copy];
 		NSMutableArray *needs = [NSMutableArray array];
 		[cached enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -93,13 +90,12 @@ static BOOL isMultiThread;
 				}
 			}];
 		}];
-		[cached release];
 		if (onFindBlock) {
 			dispatch_async(dispatch_get_main_queue(), ^ {
 				onFindBlock(needs);
 			});
 		}
-	} copy] autorelease];
+	} copy];
 }
 
 + (void)beginUpdatesForModel:(id)aModel {
@@ -143,7 +139,7 @@ static BOOL isMultiThread;
 		NSLog(@"MoViCo initialized");
 #endif
 		self.controllers = [NSMutableArray array];
-		self.updateQueue = [[[NSOperationQueue alloc] init] autorelease];
+		self.updateQueue = [[NSOperationQueue alloc] init];
 		[self.updateQueue setMaxConcurrentOperationCount:1];
 		initialized = YES;
 	}
@@ -153,12 +149,9 @@ static BOOL isMultiThread;
 - (void)dealloc {
 	initialized = NO;
 	[self.updateQueue cancelAllOperations];
-	self.updateQueue = nil;
-	self.controllers = nil;
 #ifdef MVC_DEBUG
 	NSLog(@"MoViCo deinitialized");
 #endif
-	[super dealloc];
 }
 
 #pragma mark -

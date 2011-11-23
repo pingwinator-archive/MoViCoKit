@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 
 @interface MVCTestDelegate()
-@property (nonatomic, retain) RootViewController *rootVC;
+@property (nonatomic, strong) RootViewController *rootVC;
 
 @end
 
@@ -22,14 +22,9 @@
 - (void) applicationDidFinishLaunching:(UIApplication*)application {
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.rootVC = [[[RootViewController alloc] init] autorelease];
+	self.rootVC = [[RootViewController alloc] init];
 	[window addSubview:self.rootVC.view];
 	[window makeKeyAndVisible];
 }
 
-- (void)dealloc {
-	self.rootVC = nil;
-	[window release];
-	[super dealloc];
-}
 @end

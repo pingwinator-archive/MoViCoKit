@@ -13,7 +13,7 @@
 
 }
 
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, strong) NSString *title;
 
 + (FlickrPhoto*)photoWithDictioary:(NSDictionary*)photoDictionary;
 

@@ -13,8 +13,8 @@
 
 }
 
-@property (nonatomic, retain) NSString *searchText;
-@property (nonatomic, retain) NSArray *results;
+@property (nonatomic, strong) NSString *searchText;
+@property (nonatomic, strong) NSArray *results;
 
 @property (nonatomic, copy) void (^onSearchDone)(ImageSearchRequest* request);
 @property (nonatomic, copy) void (^onSearchFail)(NSError* error);
